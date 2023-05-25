@@ -13,8 +13,10 @@ import java.util.Date;
 @EnableScheduling
 public class SchedulerService
 {
-
-    @Scheduled(fixedRate = 2000L)//milliseconds = seconds × 1,000
+    //Seconds -> MilliSeconds = (seconds x 1,000)ms
+    //Minutes -> MilliSeconds = (Minutes x 60,000)ms
+    //Hours -> MilliSeconds = (Hours x 3,600,000)ms
+    @Scheduled(fixedRate = 2000L)
     public String getTimeA()
     {
         String time = String.valueOf(new Date());
