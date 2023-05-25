@@ -14,7 +14,7 @@ import java.util.Date;
 public class SchedulerService
 {
 
-    @Scheduled(fixedRate = 2000L)
+    @Scheduled(fixedRate = 2000L)//milliseconds = seconds × 1,000
     public String getTimeA()
     {
         String time = String.valueOf(new Date());
